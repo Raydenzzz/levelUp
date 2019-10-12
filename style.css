@@ -100,6 +100,19 @@ width:90%;
 transition: 1s;
 }
 
+
+.finish {
+    border-radius: 50%; 
+    text-align:center;
+    width:40%;
+    transition: 1s;  
+}
+
+.finish:hover {
+    width:50%;
+    transition: 1s;  
+}
+
 .right{
     position: fixed;
     top: 110px;
