@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+
+    <script src="jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Level Up! Login</title>
+</head>
+<body>
+    <div>
+        <center><img src="img/titledark.png" style="width:50%;" id="entranceImg" alt="title"></center>
+    </div>
+    <div id="login_div" class="login_div">
+      <h1>Greetings Player!</h1>
+        <h3>This is the LeveL-Up project! Here you can Challange yourself - completing real life Quests and Challanges, while Leveling - Up your real life LVL and compete with friends!</h3>
+        <input type="email" placeholder="Email . . ." id="email_field" />
+        <input type="password" placeholder="Password . . ." id="password_field" />
+        <button onclick="login()">Log In and Level Up!</button>
+        <button id="info">Conditions and Agreement</button>
+        <button onclick="create_acc()" id="createButton">Create an Account and Log In!</button>
+    </div>
+
+
+
+    <div id="user_div" class="logged_in_div" >
+        <h3 id="greeting" style="position: absolute;left:0;top:0">Helloez user, you're logged in lawl.</h3>
+        <h3 id="loggedGreet" style="position: absolute;left:0;top:0"></h3>
+        <button onclick="logout()">Log Out</button>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div style=" bottom: 3px">
+      <center>
+      <h6>All rights reserved to me blah blah...</h6>
+    </center>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        document.getElementById('createButton').style.visibility='hidden';
+          $("#info").click(function () {
+            Swal.fire({
+             title: 'Attention!',
+             text: 'By Registering on LVL-UP project, you agree with terms of: No Cheating, No Bullshit, and No Whining. Otherwise you are breaking the rules and be forever titled as a Stinky Ass.',
+             imageUrl: 'img/cat.gif',
+             imageWidth: 200,
+             imageHeight: 150,
+             imageAlt: 'Custom image',
+             confirmButtonText: 'Mkay! I get it!'
+            }).then((result) => {
+              document.getElementById('createButton').style.visibility='visible';
+})
+            });      
+      });
+      </script>
+      
+      
+  
+
+
+
+    
+
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+
+     <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCORBtuwokXWgr9H8LvysRcSYpGJyWwZn8",
+          authDomain: "lvlup-c2d7a.firebaseapp.com",
+          databaseURL: "https://lvlup-c2d7a.firebaseio.com",
+          projectId: "lvlup-c2d7a",
+          storageBucket: "",
+          messagingSenderId: "10403275168",
+          appId: "1:10403275168:web:183899db485c597a"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+
+
+<script src="login.js"></script>
+
+
+</body>
+
+</html>

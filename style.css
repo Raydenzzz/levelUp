@@ -1,0 +1,141 @@
+body {
+    background: black;   /* #fff; */
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    color: white;
+}
+
+input, button {
+    font-family: 'Nunito', sans-serif;
+    margin: 10px auto;
+    font-weight: 700;
+}
+
+.login_div, .logged_in_div{
+    width: 20%;
+    margin: 0px auto;
+    margin-top: 50px;
+    padding: 20px;
+    display: none;
+}
+
+.login_div input{
+display: block;
+border: 1px solid #ccc;
+border-radius: 5px;
+background: #fff;
+padding: 15px;
+outline: none;
+width: 100%;
+margin-bottom: 20px;
+}
+
+.login_div input:focus{
+border: 1px solid #888;
+transition: 1s;
+}
+
+.login_div button, .logged_in_div button{
+background: #5d8ffc; 
+color: #fff;
+border: 1px solid #5d8ffc;
+border-radius: 5px;
+padding: 15px;
+display: block;
+width: 110%;
+transition: 1s;
+/*-webkit-transition: 2s;
+-moz-transition: 2s; */
+}
+
+.login_div button:hover, .logged_in_div button:hover{
+background: #fff;
+color: #5d8ffc;
+border: 1px solid #5d8ffc;
+cursor: pointer;
+}
+
+/*
+.login-div {
+    display:none;
+}
+*/
+
+.header_table {
+    border: 1px solid black;
+    width: 99%;
+    padding: 5px;
+
+
+   
+}
+
+.main_table {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align:center
+   
+
+}
+
+.main_menu_table {
+    margin: auto;
+    width: 100%;
+    padding: 1px;
+
+}
+
+
+.enlarge-onhover {
+width:75%;
+transition: 1s;
+border-radius: 50%;
+}
+
+.enlarge-onhover:hover {
+width:90%;
+transition: 1s;
+}
+
+.right{
+    position: fixed;
+    top: 110px;
+    left: -500px;
+    width: 100%;
+    height: 10px;
+  }
+
+  .left{
+    position: fixed;
+    top: 110px;
+    left: 500px;
+    width: 100%;
+    height: 10px;
+    
+  }
+
+
+
+
+#logout_button {
+    background: #5d8ffc; 
+    color: #fff;
+    border: 1px solid #5d8ffc;
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    width: 40%;
+    transition: 1s;
+    font-size: 12px;
+}
+
+#logout_button:hover {
+    background: rgb(221, 9, 9);
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+

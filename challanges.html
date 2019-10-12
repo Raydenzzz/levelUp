@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+
+    <script src="jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Level Up! Challanges</title>
+</head>
+<body>
+
+
+    <div class="header_table">
+        <table style="border:1px solid black;margin-left:auto;margin-right:auto; width:100%;">
+            <tr>
+                <td style="width:10%; text-align:left"> <img src="img/lvluptag.png" style="width:90%;" ></td>
+                <td style="width:20%; text-align:left"><h2 id="mainGreet">Greetings</h2></td>    
+                <td style="width:50%; text-align:center; color:rgb(84, 5, 187)"><h2>(not so) Inspirational Quote:</h2><h3>
+                    
+                        <div id="joke"></div>
+                        <div class="center">      
+                            <script class="center">
+                                let name=localStorage.getItem("name");
+                                let lastname=localStorage.getItem("lastname");
+                                 $(document).ready(function() {
+                                    $.ajax({
+                                        type: "GET",
+                                        url: "https://api.icndb.com/jokes/random?firstName="+"Roman"+"&lastName="+"the Great",//put here the user name
+                                        dataType: "json",                                                        //replace the firstName in the user name and the last name in the same.
+                                        success: function (msg) {
+                                            $("#joke").html("-" +msg.value.joke);
+                                        },
+                                        error: function (req, status, error) {
+                                             alert(req + " " + status + " " + error);
+                                         }
+                                    });
+                                });
+                            </script>
+                        </div>  
+
+                </h3></td>
+                <td style="width:20%; text-align:right"><button onclick="logout()" id="logout_button">Log Out</button></td>
+            </tr>
+        </table>
+    </div>
+
+
+    
+    <div>
+        <center><h3> This is the Level-Up Challange Training-Hall! Here you can take on different Easy and Hard tasks and <br>Challange yourself to Complete as many as you can and become the Number 1 Leader! <br>Completing Challanges will grant you EXP points which would increase your LEVEL. </h3></center>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <table style="border:1px solid black;margin-left:auto;margin-right:auto; width:99%;">
+                
+            <tr><th colspan="4"><img src="img/qgpcufH.gif" style="width:30%; text-align:center" alt="expTitle"></th></tr>
+            <tr>
+                <th style="width:5%; text-align:center"><h2>Difficulty LvL</h2></th>    
+                <th style="width:20%; text-align:center"><h2>Quest Description</h2></th>
+                <th style="width:5%; text-align:center"><h2>EXP Reward</h2></th>
+                <th style="width:20%; text-align:center"><h2>FINISH</h2></th>
+            </tr>
+            <tr>
+                <td style="width:5%; text-align:center"><img class="enlarge-onhover" src="img/1.png" ></td>
+                <td style=" text-align:center">Complete 10 Correct PushUps, without Cheating!</td>
+                <td style=" text-align:center">10</td>
+                <td style="width:5%; text-align:center"><img src="img/done.png" id="finish1" style="width:14%; border-radius: 50%; text-align:center;" ></td>
+                
+            </tr>
+            <tr>
+                <td style="width:5%; text-align:center"><img class="enlarge-onhover" src="img/2.png" ></td>
+                <td style=" text-align:center">Complete 20 Correct PushUps, without Cheating!</td>
+                <td style=" text-align:center">30</td>
+                <td style="width:5%; text-align:center"><img src="img/done.png" id="finish2"  style="width:14%; border-radius: 50%; text-align:center;" ></td>
+            </tr>
+
+            <tr>
+               <td style="width:5%; text-align:center"><img class="enlarge-onhover" src="img/3.png" ></td>
+               <td style=" text-align:center">Complete 30 Correct PushUps, without Cheating!</td>
+               <td style=" text-align:center">100</td>
+               <td style="width:5%; text-align:center"><img src="img/done.png"  id="finish3" style="width:14%; border-radius: 50%; text-align:center;" ></td>
+            </tr>
+
+            <tr>
+                <td style="width:5%; text-align:center"><img class="enlarge-onhover" src="img/2.png" ></td>
+                <td style=" text-align:center">Avoid Eating ANY Sugary Product for 1 Day!</td>
+                <td style=" text-align:center">50</td>
+                <td style="width:5%; text-align:center"><img src="img/done.png" id="finish4"  style="width:14%; border-radius: 50%; text-align:center;" ></td>
+            </tr>
+
+            <tr>
+                <td style="width:5%; text-align:center"><img class="enlarge-onhover" src="img/3.png" ></td>
+                <td style=" text-align:center">Avoid Eating ANY Sugary Product for 2 Days in a Row!</td>
+                <td style=" text-align:center">120</td>
+                <td style="width:5%; text-align:center"><img src="img/done.png" id="finish5"  style="width:14%; border-radius: 50%; text-align:center;" ></td>
+            </tr>
+
+            <tr>
+                <td style="width:5%; text-align:center"><img class="enlarge-onhover" src="img/6.png" ></td>
+                <td style=" text-align:center">Avoid Eating ANY Sugary Product for 3 Days in a Row!</td>
+                <td style=" text-align:center">300</td>
+                <td style="width:5%; text-align:center"><img src="img/done.png" id="finish6"  style="width:14%; border-radius: 50%; text-align:center;" ></td>
+             </tr>
+            <tr>
+                <td style="width:5%; text-align:center"><img class="enlarge-onhover" src="img/3.png" ></td>
+                <td style=" text-align:center">Feed 5 Street Animals!</td>
+                <td style=" text-align:center">120</td>
+                <td style="width:5%; text-align:center"><img src="img/done.png" id="finish7"  style="width:14%; border-radius: 50%; text-align:center;" ></td>
+             </tr>
+            <tr>
+                <td style="width:5%; text-align:center"><img class="enlarge-onhover" src="img/8.png" ></td>
+                <td style=" text-align:center">Read any of the Following Books:</td>
+                <td style=" text-align:center">500</td>
+                <td style="width:5%; text-align:center"><img src="img/done.png" id="finish8"  style="width:14%; border-radius: 50%; text-align:center;" ></td>
+             </tr>
+            <tr>
+                <td style="width:5%; text-align:center"><img class="enlarge-onhover" src="img/6.png" ></td>
+                <td style=" text-align:center">Complete a Full Training from the Spartan Training page section!</td>
+                <td style=" text-align:center">300</td>
+                <td style="width:5%; text-align:center"><img src="img/done.png" id="finish9"  style="width:14%; border-radius: 50%; text-align:center;" ></td>
+             </tr>
+            
+        </table>
+    </div>
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#finish1").click(function () {
+                Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                 title: 'Well Done! You gain 10 EXP!',
+                 showConfirmButton: false,
+                 timer: 2000
+                })
+                 })
+              });      
+        </script>
+
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#finish2").click(function () {
+                Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                 title: 'Well Done! You gain 30 EXP!',
+                 showConfirmButton: false,
+                 timer: 2000
+                })
+                 })
+              });      
+        </script>
+
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#finish3").click(function () {
+                Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                 title: 'Well Done! You gain 100 EXP!',
+                 showConfirmButton: false,
+                 timer: 2000
+                })
+                 })
+              });      
+        </script>
+
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#finish4").click(function () {
+                Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                 title: 'Well Done! You gain 50 EXP!',
+                 showConfirmButton: false,
+                 timer: 2000
+                })
+                 })
+              });      
+        </script>
+
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#finish5").click(function () {
+                Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                 title: 'Well Done! You gain 120 EXP!',
+                 showConfirmButton: false,
+                 timer: 2000
+                })
+                 })
+              });      
+        </script>
+
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#finish6").click(function () {
+                Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                 title: 'Well Done! You gain 300 EXP!',
+                 showConfirmButton: false,
+                 timer: 2000
+                })
+                 })
+              });      
+        </script>
+
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#finish7").click(function () {
+                Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                 title: 'Well Done! You gain 120 EXP!',
+                 showConfirmButton: false,
+                 timer: 2000
+                })
+                 })
+              });      
+        </script>
+
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#finish8").click(function () {
+                Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                 title: 'Well Done! You gain 500 EXP!',
+                 showConfirmButton: false,
+                 timer: 2000
+                })
+                 })
+              });      
+        </script>
+
+        
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#finish9").click(function () {
+                Swal.fire({
+                position: 'top-end',
+                type: 'success',
+                 title: 'Well Done! You gain 300 EXP!',
+                 showConfirmButton: false,
+                 timer: 2000
+                })
+                 })
+              });      
+        </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+      <center><a href="main.html"><img src="img/exit.png" style="width:20%;"></a></center>
+  </div>
+
+
+
+
+
+  
+      <div style=" bottom: 3px">
+          <center>
+          <h6>All rights reserved to me blah blah...</h6>
+        </center>
+        </div>
+
+
+
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+
+     <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyCORBtuwokXWgr9H8LvysRcSYpGJyWwZn8",
+          authDomain: "lvlup-c2d7a.firebaseapp.com",
+          databaseURL: "https://lvlup-c2d7a.firebaseio.com",
+          projectId: "lvlup-c2d7a",
+          storageBucket: "",
+          messagingSenderId: "10403275168",
+          appId: "1:10403275168:web:183899db485c597a"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+
+
+<script src="challanges.js"></script>
+    
+</body>
+
+</html>
